@@ -28,6 +28,7 @@ const TaskList = ({task,getTask}) => {
               <h4>{task}</h4>
               <p>{date}</p>
               </div>
+
               <div>
               <RiDeleteBack2Fill
               onClick={()=>deleteTask(id)}
@@ -38,6 +39,7 @@ const TaskList = ({task,getTask}) => {
                 boxShadow:"2px 2px 2px #ECAB9E"
               }}/>
               </div>
+              
           </div>
         )
       })}
