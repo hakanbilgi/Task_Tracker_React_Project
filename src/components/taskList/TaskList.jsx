@@ -12,7 +12,7 @@ const TaskList = ({task,getTask}) => {
     } catch (error) {
       
     }
-    getTask();  }
+    getTask()  }
 
 
 
