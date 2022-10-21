@@ -3,7 +3,6 @@ import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 import axios from "axios"
 
-
 const AddTask = ({getTask}) => {
 
   const [task,setTask]=useState("")
@@ -28,8 +27,6 @@ const AddTask = ({getTask}) => {
   getTask();
  }
 
-
-
   return (
     <div>
       <Form onSubmit={handleSubmit}>
@@ -39,7 +36,6 @@ const AddTask = ({getTask}) => {
          placeholder="Enter task" 
          onChange={(e)=>setTask(e.target.value)}/>
       </Form.Group>
-
       
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Date</Form.Label>
