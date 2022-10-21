@@ -7,10 +7,13 @@ import axios from "axios";
 
 const Home = () => {
   const [isOpen,setIsOpen]=useState(false)
+
   const [text,setText]=useState("Show Task Bar")
+
   const [task,setTask]= useState([]);
-  const url="https://6352477ea9f3f34c3739206a.mockapi.io/api/tasks"
   
+  const url="https://6352477ea9f3f34c3739206a.mockapi.io/api/tasks"
+
 
   const toggle=()=>{
     setIsOpen(!isOpen);
@@ -37,6 +40,7 @@ const Home = () => {
       { isOpen && <AddTask getTask={getTask}/>}     
       <TaskList task={task} getTask={getTask}/>
     </div>
+ 
   );
 };
 
