@@ -4,18 +4,17 @@ import Form from "react-bootstrap/Form"
 import axios from "axios"
 
 
-
 const AddTask = ({getTask}) => {
 
-  const [formTask,setFormTask]=useState("")
+  const [task,setTask]=useState("")
   const [date,setDate]=useState("")
 
   const handleSubmit=(e)=>{
     e.preventDefault();
-    const newTask={formTask,date}
+    const newTask={task,date}
     console.log("task geldi mi:",newTask)
     addNewTask(newTask)
-    setFormTask("")
+    setTask("")
     setDate("")
   }
 
@@ -35,10 +34,10 @@ const AddTask = ({getTask}) => {
     <div>
       <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>formTask</Form.Label>
+        <Form.Label>Task</Form.Label>
         <Form.Control type="text"
          placeholder="Enter task" 
-         onChange={(e)=>setFormTask(e.target.value)}/>
+         onChange={(e)=>setTask(e.target.value)}/>
       </Form.Group>
 
       
