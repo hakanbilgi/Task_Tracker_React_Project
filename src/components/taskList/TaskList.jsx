@@ -24,6 +24,7 @@ const TaskList = ({task,getTask}) => {
           <div 
           key={id}
           className="mt-2 d-flex justify-content-between bg-secondary rounded-2 p-2" >
+            
               <div>
               <h4>{task}</h4>
               <p>{date}</p>
@@ -39,7 +40,7 @@ const TaskList = ({task,getTask}) => {
                 boxShadow:"2px 2px 2px #ECAB9E"
               }}/>
               </div>
-              
+
           </div>
         )
       })}
