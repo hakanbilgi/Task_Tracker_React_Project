@@ -7,15 +7,15 @@ import axios from "axios"
 
 const AddTask = ({getTask}) => {
 
-  const [task,setTask]=useState("")
+  const [formTask,setFormTask]=useState("")
   const [date,setDate]=useState("")
 
   const handleSubmit=(e)=>{
     e.preventDefault();
-    const newTask={task,date}
+    const newTask={formTask,date}
     console.log("task geldi mi:",newTask)
     addNewTask(newTask)
-    setTask("")
+    setFormTask("")
     setDate("")
   }
 
@@ -35,10 +35,10 @@ const AddTask = ({getTask}) => {
     <div>
       <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Task</Form.Label>
+        <Form.Label>formTask</Form.Label>
         <Form.Control type="text"
          placeholder="Enter task" 
-         onChange={(e)=>setTask(e.target.value)}/>
+         onChange={(e)=>setFormTask(e.target.value)}/>
       </Form.Group>
 
       
